@@ -2,6 +2,9 @@
 I tried my hands on Streamlit 
 Streamlit is a free, open-source, all-python framework that enables data scientists to quickly build interactive dashboards and web apps with no front-end web development experience required.
 
+### Open web app with:
+https://kanugoyal-streamlit-data-analysis-analyzing-dataset-3c7lw8.streamlitapp.com/
+
 ![Homepage](homepage.png)
 
 Here, We will use 3 different models (KNN, SVM, Random Forest) for classification and give the user the ability to set some parameters. Before we get started import streamlit, the datasets from sklearn, various models from sklearn, libraries needed to make our plots and pandas
