@@ -14,9 +14,11 @@ local_css("style.css")
 
 #main function
 def main():
-    st.subheader("""Daily **closing price** for """ + selected_stock)
-    #get data on searched ticker
     stock_data = yf.Ticker(selected_stock)
+    company_name = stock_data.info['longName']
+    st.subheader("""Daily **closing price** for """ + selected_stock + "- " + company_name)
+    #get data on searched ticker
+    
     #get historical data for searched ticker
     stock_df = stock_data.history(period='1d', start='2020-01-01', end=None)
     #print line chart with daily closing prices for searched ticker
@@ -113,7 +115,7 @@ def main():
 
 #ticker search feature in sidebar
 st.sidebar.subheader("""Stock Search Web App""")
-selected_stock = st.sidebar.text_input("Enter a valid stock ticker...", "GOOG")
+selected_stock = st.sidebar.text_input("Enter a valid stock ticker...", "MSFT")
 button_clicked = st.sidebar.button("GO")
 if button_clicked == "GO":
     main()
