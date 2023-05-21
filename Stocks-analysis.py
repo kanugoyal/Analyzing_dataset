@@ -15,8 +15,8 @@ local_css("style.css")
 #main function
 def main():
     stock_data = yf.Ticker(selected_stock)
-    company_name = stock_data.info['longName']
-    st.subheader("""Daily **closing price** for """ + selected_stock + "- " + company_name)
+    #company_name = stock_data.info['longName']
+    st.subheader("""Daily **closing price** for """ + selected_stock )
     #get data on searched ticker
     
     #get historical data for searched ticker
